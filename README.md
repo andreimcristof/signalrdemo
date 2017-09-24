@@ -1,2 +1,2 @@
 # signalRNetCoreDemo
-demo of signalR + angular 2 
+demo of signalR + angular 2
