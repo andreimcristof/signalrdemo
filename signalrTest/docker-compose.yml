@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  signalrtest:
+    image: signalrtest
+    build:
+      context: ./signalrTest
+      dockerfile: Dockerfile
