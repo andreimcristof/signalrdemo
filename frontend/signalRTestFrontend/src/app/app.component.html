@@ -5,3 +5,13 @@
 <div *ngFor="let msg of messages">
   <p>{{msg}}</p>
 </div>
+
+<form (ngSubmit)="onSubmit()" #messageForm="ngForm">
+  <div class="form-group">
+    <label for="newMessage">Message</label>
+    <input type="text" class="form-control" [(ngModel)]="newMessage" name="newMessage" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Send</button>
+
+</form>
