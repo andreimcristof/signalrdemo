@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'app works!';
   messages : Array<string>;
   connection: HubConnection;
+  newMessage: "";
 
   ngOnInit(){
     this.messages = new Array<string>();
@@ -21,5 +22,11 @@ export class AppComponent {
 
     this.connection.start()
               .then(() => this.connection.invoke('send', 'Hello'));
+    }
+
+    onSubmit() {
+      console.log(this.newMessage);
+      this.connection.invoke('send', this.newMessage);
+      this.newMessage = "";
     }
 }
